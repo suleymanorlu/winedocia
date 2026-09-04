@@ -6,6 +6,7 @@
     <title>Winedocia - Şarap Danışmanlığı ve Eğitim | Kapadokya</title>
     <meta name="description" content="Kapadokya'da şarap tadımları, otel ve restoran danışmanlığı, bar ve servis eğitimleri">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -17,18 +18,79 @@
             <ul class="nav-links">
                 <li><a href="#home">Anasayfa</a></li>
                 <li><a href="#services">Hizmetler</a></li>
+                <li><a href="#gallery">Galeri</a></li>
                 <li><a href="#about">Hakkımızda</a></li>
                 <li><a href="#contact">İletişim</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- Hero Section with Background -->
+    <section id="home" class="hero" style="background-image: url('https://images.unsplash.com/photo-1510812431401-41d2cab2707d?w=1200&h=600&fit=crop'); background-attachment: fixed; background-position: center;">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h2>Kapadokya'nın Şarap Dünyasına Hoşgeldiniz</h2>
             <p>Profesyonel şarap danışmanlığı, tadım deneyimleri ve eğitim hizmetleri</p>
             <a href="#contact" class="cta-button">Bize Ulaşın</a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Deneyimlerimiz</h2>
+            <p class="gallery-subtitle">Kapadokya'da şarap ve kültür</p>
+            
+            <div class="gallery-slider">
+                <div class="gallery-track" id="galleryTrack">
+                    <!-- Slide 1 - Wine Tasting -->
+                    <div class="gallery-slide">
+                        <img src="https://images.unsplash.com/photo-1510812431401-41d2cab2707d?w=400&h=300&fit=crop" alt="Şarap Tadımı">
+                        <div class="slide-caption">Profesyonel Şarap Tadımı</div>
+                    </div>
+
+                    <!-- Slide 2 - Cappadocia -->
+                    <div class="gallery-slide">
+                        <img src="https://images.unsplash.com/photo-1571896167335-06e1b6e12524?w=400&h=300&fit=crop" alt="Kapadokya">
+                        <div class="slide-caption">Kapadokya Manzaraları</div>
+                    </div>
+
+                    <!-- Slide 3 - Wine Education -->
+                    <div class="gallery-slide">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop" alt="Eğitim">
+                        <div class="slide-caption">Profesyonel Eğitim Programları</div>
+                    </div>
+
+                    <!-- Slide 4 - Restaurant -->
+                    <div class="gallery-slide">
+                        <img src="https://images.unsplash.com/photo-1504674900921-b8e8b5987d0c?w=400&h=300&fit=crop" alt="Restoran">
+                        <div class="slide-caption">Otel & Restoran Danışmanlığı</div>
+                    </div>
+
+                    <!-- Slide 5 - Bar Service -->
+                    <div class="gallery-slide">
+                        <img src="https://images.unsplash.com/photo-1514432324607-2e467f4af445?w=400&h=300&fit=crop" alt="Bar">
+                        <div class="slide-caption">Bar & Servis Eğitimi</div>
+                    </div>
+
+                    <!-- Slide 6 - Team -->
+                    <div class="gallery-slide">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Takım">
+                        <div class="slide-caption">Profesyonel Takımımız</div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button class="gallery-btn gallery-prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-btn gallery-next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Dots -->
+            <div class="gallery-dots" id="galleryDots"></div>
         </div>
     </section>
 
@@ -40,7 +102,9 @@
             <div class="services-grid">
                 <!-- Wine Tasting -->
                 <div class="service-card">
-                    <div class="service-icon">🍷</div>
+                    <div class="service-icon">
+                        <i class="fas fa-wine-glass-alt"></i>
+                    </div>
                     <h3>Şarap Tadımları</h3>
                     <p>Kapadokya bölgesinin en iyi şaraplarını profesyonel sommelierlerimizle keşfedin. Grup ve bireysel tadım seansları organize ediyoruz.</p>
                     <ul>
@@ -52,7 +116,9 @@
 
                 <!-- Hotel & Restaurant Consulting -->
                 <div class="service-card">
-                    <div class="service-icon">🏨</div>
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
                     <h3>Otel & Restoran Danışmanlığı</h3>
                     <p>Oteller ve restoranlar için kapsamlı şarap listesi tasarımı ve yönetimi hizmetleri sunuyoruz.</p>
                     <ul>
@@ -64,7 +130,9 @@
 
                 <!-- Bar & Service Training -->
                 <div class="service-card">
-                    <div class="service-icon">🍾</div>
+                    <div class="service-icon">
+                        <i class="fas fa-glass-whiskey"></i>
+                    </div>
                     <h3>Bar & Servis Eğitimleri</h3>
                     <p>Profesyonel personel için kapsamlı şarap ve bar servis eğitim programları.</p>
                     <ul>
