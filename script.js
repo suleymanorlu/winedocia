@@ -1,7 +1,51 @@
-// ===== Form Handling =====
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
+// ===== Gallery Slider =====
+let currentSlide = 0;
+const slides = document.querySelectorAll('.gallery-slide');
+const totalSlides = slides.length;
+
+function updateGallery() {
+    const track = document.getElementById('galleryTrack');
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
     
+    // Update dots
+    document.querySelectorAll('.dot').forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateGallery();
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateGallery();
+}
+
+// ===== Initialize Gallery =====
+document.addEventListener('DOMContentLoaded', function() {
+    // Create dots
+    const dotsContainer = document.getElementById('galleryDots');
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.className = `dot ${i === 0 ? 'active' : ''}`;
+        dot.addEventListener('click', () => {
+            currentSlide = i;
+            updateGallery();
+        });
+        dotsContainer.appendChild(dot);
+    }
+
+    // Gallery buttons
+    document.getElementById('nextBtn').addEventListener('click', nextSlide);
+    document.getElementById('prevBtn').addEventListener('click', prevSlide);
+
+    // Auto-play gallery (change every 5 seconds)
+    setInterval(nextSlide, 5000);
+
+    // Form handling
+    const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -14,6 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add animation on scroll
     observeElements();
+
+    // Set active nav link
+    setActiveNavLink();
 });
 
 // ===== Form Submission Handler =====
@@ -37,8 +84,7 @@ function handleFormSubmit() {
         return;
     }
 
-    // Here you would typically send the data to a server
-    // For now, we'll just show a success message
+    // Show success message
     showAlert('Mesajınız başarıyla gönderilmiştir! En kısa sürede sizinle iletişime geçeceğiz.', 'success');
     
     // Reset form
@@ -204,8 +250,12 @@ function setActiveNavLink() {
     });
 }
 
-setActiveNavLink();
+// ===== Keyboard Navigation =====
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') prevSlide();
+    if (e.key === 'ArrowRight') nextSlide();
+});
 
 // ===== Console Message =====
-console.log('%c🍷 Winedocia - Wine Consultancy Services', 'font-size: 16px; color: #722f37; font-weight: bold;');
+console.log('%cWinedocia - Wine Consultancy Services', 'font-size: 16px; color: #722f37; font-weight: bold;');
 console.log('%cKapadokya\'da şarap danışmanlığı, tadımları ve eğitim hizmetleri', 'font-size: 12px; color: #666;');
