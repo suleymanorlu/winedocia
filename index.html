@@ -3,233 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Winedocia - Şarap Danışmanlığı ve Eğitim | Kapadokya</title>
-    <meta name="description" content="Kapadokya'da şarap tadımları, otel ve restoran danışmanlığı, bar ve servis eğitimleri">
+    <title>Winedocia | Profesyonel Şarap ve Gastronomi Danışmanlığı</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <h1>Winedocia</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Anasayfa</a></li>
-                <li><a href="#services">Hizmetler</a></li>
-                <li><a href="#gallery">Galeri</a></li>
-                <li><a href="#about">Hakkımızda</a></li>
-                <li><a href="#contact">İletişim</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section with Background -->
-    <section id="home" class="hero" style="background-image: url('https://images.unsplash.com/photo-1510812431401-41d2cab2707d?w=1200&h=600&fit=crop'); background-attachment: fixed; background-position: center;">
-        <div class="hero-overlay"></div>
+    <!-- HERO BÖLÜMÜ -->
+    <section class="hero-section">
         <div class="hero-content">
-            <h2>Kapadokya'nın Şarap Dünyasına Hoşgeldiniz</h2>
-            <p>Profesyonel şarap danışmanlığı, tadım deneyimleri ve eğitim hizmetleri</p>
-            <a href="#contact" class="cta-button">Bize Ulaşın</a>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2>Deneyimlerimiz</h2>
-            <p class="gallery-subtitle">Kapadokya'da şarap ve kültür</p>
+            <img src="https://via.placeholder.com/300x150?text=Winedocia+Logo" alt="Winedocia Logo" class="logo-image">
             
-            <div class="gallery-slider">
-                <div class="gallery-track" id="galleryTrack">
-                    <!-- Slide 1 - Wine Tasting -->
-                    <div class="gallery-slide">
-                        <img src="https://images.unsplash.com/photo-1510812431401-41d2cab2707d?w=400&h=300&fit=crop" alt="Şarap Tadımı">
-                        <div class="slide-caption">Profesyonel Şarap Tadımı</div>
-                    </div>
-
-                    <!-- Slide 2 - Cappadocia -->
-                    <div class="gallery-slide">
-                        <img src="https://images.unsplash.com/photo-1571896167335-06e1b6e12524?w=400&h=300&fit=crop" alt="Kapadokya">
-                        <div class="slide-caption">Kapadokya Manzaraları</div>
-                    </div>
-
-                    <!-- Slide 3 - Wine Education -->
-                    <div class="gallery-slide">
-                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop" alt="Eğitim">
-                        <div class="slide-caption">Profesyonel Eğitim Programları</div>
-                    </div>
-
-                    <!-- Slide 4 - Restaurant -->
-                    <div class="gallery-slide">
-                        <img src="https://images.unsplash.com/photo-1504674900921-b8e8b5987d0c?w=400&h=300&fit=crop" alt="Restoran">
-                        <div class="slide-caption">Otel & Restoran Danışmanlığı</div>
-                    </div>
-
-                    <!-- Slide 5 - Bar Service -->
-                    <div class="gallery-slide">
-                        <img src="https://images.unsplash.com/photo-1514432324607-2e467f4af445?w=400&h=300&fit=crop" alt="Bar">
-                        <div class="slide-caption">Bar & Servis Eğitimi</div>
-                    </div>
-
-                    <!-- Slide 6 - Team -->
-                    <div class="gallery-slide">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Takım">
-                        <div class="slide-caption">Profesyonel Takımımız</div>
-                    </div>
-                </div>
-
-                <!-- Navigation Buttons -->
-                <button class="gallery-btn gallery-prev" id="prevBtn">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="gallery-btn gallery-next" id="nextBtn">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-
-            <!-- Dots -->
-            <div class="gallery-dots" id="galleryDots"></div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Hizmetlerimiz</h2>
+            <h1 class="hero-title">Kapadokya'nın Kalbinden Profesyonel Şarap ve Gastronomi Danışmanlığı ve Deneyimi</h1>
             
-            <div class="services-grid">
-                <!-- Wine Tasting -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-wine-glass-alt"></i>
-                    </div>
-                    <h3>Şarap Tadımları</h3>
-                    <p>Kapadokya bölgesinin en iyi şaraplarını profesyonel sommelierlerimizle keşfedin. Grup ve bireysel tadım seansları organize ediyoruz.</p>
-                    <ul>
-                        <li>Kişiye özel tadım deneyimleri</li>
-                        <li>Grup etkinlikleri ve corporate events</li>
-                        <li>Şarap eğitim seminerleri</li>
-                    </ul>
-                </div>
-
-                <!-- Hotel & Restaurant Consulting -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3>Otel & Restoran Danışmanlığı</h3>
-                    <p>Oteller ve restoranlar için kapsamlı şarap listesi tasarımı ve yönetimi hizmetleri sunuyoruz.</p>
-                    <ul>
-                        <li>Şarap seçimi ve tedarik danışmanlığı</li>
-                        <li>Şarap kartelası tasarımı</li>
-                        <li>Depo yönetimi ve envanteri</li>
-                    </ul>
-                </div>
-
-                <!-- Bar & Service Training -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-glass-whiskey"></i>
-                    </div>
-                    <h3>Bar & Servis Eğitimleri</h3>
-                    <p>Profesyonel personel için kapsamlı şarap ve bar servis eğitim programları.</p>
-                    <ul>
-                        <li>Barista ve barmen eğitimi</li>
-                        <li>Şarap servis teknikleri</li>
-                        <li>Müşteri deneyimi optimizasyonu</li>
-                    </ul>
-                </div>
+            <p class="hero-subtitle">2010 yılından bu yana sektörde olan bir Yiyecek & İçecek Uzmanı ve Sommelier'in öncülüğünde, Anadolu'nun zengin şarap kültürünü dünyaya taşıyor.</p>
+            
+            <div class="button-container">
+                <a href="#iletisim" class="btn btn-primary">Danışmanlık Al</a>
+                <a href="#hizmetler" class="btn btn-secondary">Hizmetlerimiz</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Hakkımızda</h2>
-            <div class="about-content">
-                <p>Winedocia, Kapadokya bölgesinde şarap kültürünü yaygınlaştırmak ve profesyonel danışmanlık hizmetleri sunmak için kurulmuştur.</p>
-                
-                <p>Biz, şarap sadece bir içecek değil, bir yaşam tarzı ve kültür olduğuna inanıyoruz. Müşterilerimize en iyi şarap deneyimini sunmak, oteller ve restoranları danışmanlık ile desteklemek, ve profesyonel personeli eğitmek bizim misyonumuz.</p>
-                
-                <h3>Neden Winedocia?</h3>
+
+    <!-- VİZYONUMUZ BÖLÜMÜ -->
+    <section id="vizyon" class="vision-section">
+        <h2 class="section-title">Vizyonumuz: Dijital'den Fiziksel'e</h2>
+        
+        <div class="vision-container">
+            <div class="vision-box">
+                <h3>Şimdiki Durum</h3>
+                <p>Online platformumuzla Türkiye genelinde butik oteller, butik restoranlar ve lüks tur operatörlerine premium şarap ve gastronomi danışmanlığı sunuyoruz.</p>
+            </div>
+            
+            <div class="vision-box">
+                <h3>Gelecek Hayalimiz</h3>
+                <p>Kapadokya'nın kalbinde, şarap sevgilerini bir araya getiren fiziksel bir şarap evi kurarak deneyimli misafirlerimizi ağırlamak.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARALLAX (SABİT GÖRSEL) BÖLÜMÜ -->
+    <div class="parallax-break" id="parallax-gallery"></div>
+
+
+    <!-- HİZMETLERİMİZ BÖLÜMÜ -->
+    <section id="hizmetler" class="services-section">
+        <h2 class="section-title">Hizmetlerimiz</h2>
+        <p style="max-width: 800px; margin: -30px auto 50px; color: #b0b0b0;">Kurumsal ihtiyaçlarınıza özel tasarlanmış kapsamlı çözümlerimizle, mekanınızın şarap ve gastronomi vizyonunu şekillendiriyoruz.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Şarap Tadımı & Eğitimi</h3>
+                <p>Anadolu coğrafyası odaklı tadım etkinlikleri ve profesyonel şarap kültürü eğitimleri.</p>
                 <ul>
-                    <li>Profesyonel ve sertifikalı sommelierler</li>
-                    <li>Kapadokya bölgesinin en iyi şaraplarına erişim</li>
-                    <li>Özelleştirilmiş danışmanlık hizmetleri</li>
-                    <li>Geniş ağ ve iş ortaklıkları</li>
-                    <li>Yüksek müşteri memnuniyeti</li>
+                    <li>Yerel üzüm çeşitleriyle özel tadımlar</li>
+                    <li>Personel servis teknikleri eğitimi</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Menü & Konsept Tasarımı</h3>
+                <p>Şarap eşleşmeli menüler ve mekana özel kokteyl reçeteleri geliştirme.</p>
+                <ul>
+                    <li>Mekana özgü imza kokteyl reçeteleri</li>
+                    <li>Lezzet uyumlu şarap listeleri</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Turizm & Personel Eğitimi</h3>
+                <p>Uluslararası standartlarda gıda güvenliği ve üst düzey servis kuralları.</p>
+                <ul>
+                    <li>Gıda güvenliği & Alerjen yönetimi</li>
+                    <li>Misafir deneyimi ve protokol eğitimi</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Görsel İletişim</h3>
+                <p>Profesyonel menü kapakları ve marka kimliği tasarımları.</p>
+                <ul>
+                    <li>Modern tasarım araçlarıyla şık menü dizaynı</li>
+                    <li>Sosyal medya marka yönetimi</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>İletişim</h2>
-            <p>Hizmetlerimiz hakkında daha fazla bilgi almak için bizimle iletişime geçin.</p>
+
+    <!-- İLETİŞİM BÖLÜMÜ -->
+    <section id="iletisim" class="contact-section">
+        <div class="contact-content">
+            <h2 class="contact-title">Birlikte Yaratmak İçin Hazırız</h2>
+            <p class="contact-text">Winedocia olarak, mekanınızın benzersiz kimliğini şarap ve gastronomi kültürüyle buluşturmak için buradayız. Şarap menüsü tasarımı, personel eğitimi, konsept geliştirme ve görsel iletişim ihtiyaçlarınız için bizimle iletişime geçin.</p>
             
-            <div class="contact-content">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Adınız</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Telefon</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Konu</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Seçiniz</option>
-                            <option value="tasting">Şarap Tadımı İçin</option>
-                            <option value="consulting">Danışmanlık Hizmeti İçin</option>
-                            <option value="training">Eğitim Programı İçin</option>
-                            <option value="other">Diğer</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Mesajınız</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Gönder</button>
-                </form>
-                
-                <div class="contact-info">
-                    <h3>Bize Ulaşın</h3>
-                    <p>Email: <a href="mailto:info@winedocia.com">info@winedocia.com</a></p>
-                    <p>Telefon: <a href="tel:+905392975770">+90 539 297 5770</a></p>
-                    <p>Konum: Kapadokya, Türkiye</p>
-                    <p>Web: winedocia.com</p>
-                    
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/winedocia?igsi=MWpmdXFtMjl5MTBnNA%3D%3D&utm_source=qr" class="social-icon" target="_blank">Instagram</a>
-                        <a href="https://www.facebook.com/share/1DJVFNFaVi/?mibextid=wwXIfr" class="social-icon" target="_blank">Facebook</a>
-                        <a href="https://www.linkedin.com/in/suleymanorlu?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="social-icon" target="_blank">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
+            <a href="mailto:info@winedocia.com" class="btn btn-primary">Bize Ulaşın</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Winedocia. Tüm hakları saklıdır.</p>
-        </div>
+
+    <!-- FOOTER (ALT BİLGİ) BÖLÜMÜ -->
+    <footer class="footer-section">
+        <p class="footer-text">© 2026 Winedocia. Tüm Hakları Saklıdır.</p>
+        <p class="footer-text"><span class="footer-highlight">Süleyman Örlü</span> | F&B Manager & Sommelier</p>
     </footer>
 
     <script src="script.js"></script>
