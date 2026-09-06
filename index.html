@@ -247,6 +247,7 @@
         }
 
         .form-field input,
+        .form-field select,
         .form-field textarea {
             box-sizing: border-box;
             width: 100%;
@@ -258,12 +259,17 @@
             font: inherit;
         }
 
+        .form-field select {
+            appearance: auto;
+        }
+
         .form-field textarea {
             min-height: 140px;
             resize: vertical;
         }
 
         .form-field input:focus,
+        .form-field select:focus,
         .form-field textarea:focus {
             outline: 2px solid #cda274;
             outline-offset: 1px;
@@ -403,7 +409,7 @@
     <section id="iletisim" class="contact-section">
         <div class="contact-content">
             <h2 class="contact-title">Birlikte Yaratmak İçin Hazırız</h2>
-            <p class="contact-text">Winedocia olarak, mekanınızın benzersiz kimliğini şarap ve gastronomi kültürüyle buluşturmak için buradayız. Şarap menüsü tasarımı, personel eğitimi, konsept geliştirme ve görsel iletişim ihtiyaçlarınız için bizimle iletişime geçin.</p>
+            <p class="contact-text">Winedocia olarak mekanınızın benzersiz kimliğini, şarap ve gastronomi kültürüyle buluşturuyor; şarap menüsü tasarımı, personel eğitimi, konsept geliştirme, görsel iletişim ve şarap tadımı organizasyonları/rezervasyonları için uçtan uca çözümler sunuyoruz. Detaylar ve iş birliği için bizimle iletişime geçin.</p>
             
             <form class="contact-form" action="https://formsubmit.co/info@winedocia.com" method="POST">
                 <input type="hidden" name="_subject" value="Winedocia web sitesi iletişim formu">
@@ -427,6 +433,17 @@
                         <label for="company">Şirket / Mekan</label>
                         <input type="text" id="company" name="company" autocomplete="organization">
                     </div>
+                </div>
+                <div class="form-field">
+                    <label for="request-type">Talep Türü *</label>
+                    <select id="request-type" name="request_type" required>
+                        <option value="" disabled selected>Talep türünüzü seçin</option>
+                        <option value="Şarap Menüsü">Şarap Menüsü</option>
+                        <option value="Danışmanlık">Danışmanlık</option>
+                        <option value="Tadım Rezervasyonu">Tadım Rezervasyonu</option>
+                        <option value="Personel Eğitimi">Personel Eğitimi</option>
+                        <option value="Diğer">Diğer</option>
+                    </select>
                 </div>
                 <div class="form-field">
                     <label for="message">Mesajınız *</label>
